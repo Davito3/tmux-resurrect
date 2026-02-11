@@ -32,7 +32,7 @@ main() {
 	elif persistence_nvim_plugin_exists; then
 		# Load folke's persistence.nvim sessions. And Shoutout to ThePrimeagen and TjDevries.
 		# Also Shoutout to my favorite youtuber Mr. Hussein Nasser because I'm learning a lot from you.
-		echo "nvim -c 'lua require(\"persistence\").load()'"
+		echo " nvim -c 'lua require(\"persistence\").load()'"
 	else
 		echo "$ORIGINAL_COMMAND"
 	fi
