@@ -16,7 +16,7 @@ original_command_contains_session_flag() {
 }
 
 persistence_nvim_plugin_exists() {
-	nvim --headless -c 'lua if not pcall(require, "persistence") then os.exit(1) end' -c 'qa'
+	nvim --headless -c 'lua if not pcall(require, "persistence") then vim.cmd("cquit 1") else vim.cmd("cquit 0") end'
 	# shellcheck disable=2181
 	[ $? -eq 0 ]
 }
